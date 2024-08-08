@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+  @apply shadow-md py-3 px-6 rounded-md transition duration-300
+}
+
+.btn-purple {
+  @apply bg-soft-blue text-gray-800
+}
+
+.btn-steel {
+  @apply bg-steel-blue text-gray-800
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

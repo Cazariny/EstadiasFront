@@ -1,0 +1,53 @@
+<!-- <header class="row g-0 justify-content-center background-header bg-soft-blue">
+  <div class="col-11 offset-1 text-left pt-3">
+    <div class="row g-0 align-items-center">
+      <div class="col-auto cursor-pointer">
+        <img
+          src="assets/img/back.svg"
+          width="16px"
+          height="16px"
+          alt="back"
+          routerLink=""
+        />
+      </div>
+      <div class="col-auto cursor-pointer">
+        <span routerLink=""> Regresar</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 text-center">
+    <div class="row g-0">
+      <div class="col 12 pb-2">
+        <b class="text-4xl">Mapa </b>
+      </div>
+    </div>
+  </div>
+</header> -->
+<header class="flex flex-col items-center bg-soft-blue py-4">
+  <div class="flex items-center justify-start w-full max-w-screen-lg">
+    <div class="flex items-center cursor-pointer mr-4">
+      <img src="assets/img/back.svg" width="16px" height="16px" alt="back" routerLink="" class="mr-2"/>
+      <span routerLink="">Regresar</span>
+    </div>
+  </div>
+  <div class="w-full text-center mt-3">
+    <b class="text-4xl">Mapa</b>
+  </div>
+</header>
+<main>
+
+  <div class="left-bar" id="ol-map" #olMap></div>
+  <ng-template #tooltipElement let-content let-closePopover="closePopover">
+    <app-popover [data]="content" [closePopover]="closePopover"></app-popover>
+  </ng-template>
+
+
+  <div class="map-container">
+    <map-map-handler [map]="map"></map-map-handler>
+  </div>
+</main>
+
+<footer>
+  <map-scaleline [map]="map" />
+  <map-mouse-position [map]="map" positionTemplate="{x}, {y} m"></map-mouse-position>
+</footer>

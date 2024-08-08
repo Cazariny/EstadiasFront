@@ -1,0 +1,25 @@
+<header>
+  <nav class="container flex items-center sm:mt-12">
+    <div class="py-1">
+      <img src="assets/img/logo5.svg" alt="logo" />
+    </div>
+    <h1 class="text-xl">Data Weather Hub</h1>
+    <ul
+      class="hidden sm:flex flex-1 justify-end items-center gap-12 text-gray-800 uppercase text-s"
+    >
+      <a href="#que-hacemos" class="no-underline text-slate-900"> <li class="cursor-pointer">¿Qúe hacemos?</li></a>
+      <a href="#caracteristicas" class="no-underline text-slate-900"> <li class="cursor-pointer">Caracteristicas</li></a>
+      <a href="#quienes-somos" class="no-underline text-slate-900"> <li class="cursor-pointer">Qúienes Somos?</li></a>
+      <a href="#faq" class="no-underline text-slate-900"><li class="cursor-pointer">FAQ</li></a>
+      <button
+        type="button"
+        class="bg-soft-blue text-gray-900 rounded-md px-7 py-3 uppercase" [routerLink]="['/map']"
+      >
+        Iniciar
+      </button>
+    </ul>
+    <div class="flex sm:hidden flex-1 justify-end">
+      <fa-icon class="text-2xl" [icon]="faBars"></fa-icon>
+    </div>
+  </nav>
+</header>

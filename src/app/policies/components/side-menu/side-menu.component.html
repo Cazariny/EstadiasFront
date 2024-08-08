@@ -1,0 +1,13 @@
+<ul class="">
+  @for (item of menuItems; track $index) {
+    <a
+    [routerLink]="item.path"
+    routerLinkActive="active"
+    class="flex items-center space-x-2 p-3 hover:bg-gray-100 transition duration-150"
+  >
+    <span class="text-lg font-bold text-gray-900">{{ item.title }}</span>
+  </a>
+  }
+
+</ul>
+
